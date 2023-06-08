@@ -1,0 +1,20 @@
+package com.masai.services;
+
+import java.util.List;
+
+import com.masai.Entiy.Book;
+
+public interface BookService {
+	
+	public List<Book> ListGetAllBooks();
+	
+	
+	public Book GetBookById(Integer Id);
+	
+	public Book AddNewBook(Book book);
+	
+	public Book Updatebook(Book book);
+	
+	public Book DeleteBookById(Integer Id);
+
+}

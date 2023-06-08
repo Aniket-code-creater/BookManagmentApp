@@ -1,0 +1,42 @@
+package com.masai.services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.masai.Entiy.Book;
+
+@Service
+public class BookServiceImpl implements BookService{
+
+	@Override
+	public List<Book> ListGetAllBooks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Book GetBookById(Integer Id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Book AddNewBook(Book book) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Book Updatebook(Book book) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Book DeleteBookById(Integer Id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,8 @@
+package com.masai.Entiy;
+
+@Entity
+public class User {
+	
+	private Integer Id;
+
+}

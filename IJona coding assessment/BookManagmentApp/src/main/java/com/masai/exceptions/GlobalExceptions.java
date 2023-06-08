@@ -1,0 +1,38 @@
+package com.masai.exceptions;
+
+import java.time.LocalDate;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.context.request.WebRequest;
+
+
+//Global Exception Handler for handle the all Exceptions;
+@ControllerAdvice
+public class GlobalExceptions {
+	
+	
+
+	// This method handles the exception when a BookNotFoundException is thrown
+	@ExceptionHandler(BookNotFoundException.class)
+	public ResponseEntity<String> nobookfound(BookNotFoundException bne,WebRequest web){
+		
+		// Create an instance of MyErrorDetails to store the error information
+		MyErrorDetails myErrorDetails= new MyErrorDetails();
+		
+		// Set the current date as the time stamp for the error
+		myErrorDetails.setTimestampDate(LocalDate.now());
+		
+		// Set the error message from the BookNotFoundException
+		myErrorDetails.setMessage(bne.getMessage());
+		
+		// Set the error details from the WebRequest description
+		myErrorDetails.setDetails(web.getDescription(false));
+		
+		// Return a ResponseEntity with the error message and status code
+		return new ResponseEntity<>("Book Not Found", HttpStatus.BAD_REQUEST);
+	}
+
+}
