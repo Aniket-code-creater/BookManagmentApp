@@ -5,8 +5,8 @@ This is a Spring Boot application that provides a RESTful API for managing a lis
 
 ## API Endpoints
 ### Retrieve all books
-Method: GET
-URL: /api/books
+##### Method: GET
+##### URL: /api/books
 Returns a list of all books.
 
 ### Retrieve a book by its ID
@@ -31,7 +31,7 @@ json
 
 ### Update an existing book
 ##### Method: PUT
-URL: /api/books/{id}
+##### URL: /api/books/{id}
 Updates an existing book with the specified ID. The updated book details should be provided in the request body as JSON.
 
 ###### Example request body:
@@ -49,8 +49,8 @@ Updates an existing book with the specified ID. The updated book details should 
 ##### URL: /api/books/{id}
 Deletes a book with the specified ID.
 
-Response Format
-The API endpoints return JSON responses in the following format:
+##### Response Format
+##### The API endpoints return JSON responses in the following format:
 
 {
   "status": "success",
