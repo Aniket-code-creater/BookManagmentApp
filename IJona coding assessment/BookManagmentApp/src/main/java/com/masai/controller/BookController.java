@@ -19,6 +19,8 @@ import com.masai.Entiy.Book;
 import com.masai.exceptions.BookNotFoundException;
 import com.masai.services.BookService;
 
+
+//@Controller + @ResponseBody=@Restcontroller
 @RestController
 @RequestMapping("/ijona")
 public class BookController {
@@ -26,6 +28,12 @@ public class BookController {
 	@Autowired
 	private BookService bookService;
 	
+	/**
+	 * Retrieves all books.
+	 * 
+	 * @return ResponseEntity containing a list of all books and HTTP status code OK
+	 * @throws BookNotFoundException if no books are found
+	 */
 	@GetMapping("/books")
 	public ResponseEntity<List<Book>> getAllbooks() throws BookNotFoundException{
 		List<Book> books= bookService.GetAllBooks();
@@ -33,13 +41,24 @@ public class BookController {
 	}
 	
 	
+	/**
+	 * Adds a new book.
+	 * @param book the book to add
+	 * @return ResponseEntity containing the added book and HTTP status code CREATED
+	 */
 	@PostMapping("/addbook")
 	public ResponseEntity<Book> Addnewbook(@RequestBody Book book){
 		Book book2=bookService.AddNewBook(book);
 		return new ResponseEntity<>(book2,HttpStatus.CREATED);
 	}
 	
-	
+	/**
+	 * Retrieves a book by its ID.
+	 * 
+	 * @param Id the ID of the book to retrieve
+	 * @return ResponseEntity containing the book with the specified ID and HTTP status code OK
+	 * @throws BookNotFoundException if the book with the given ID is not found
+	 */
 	@GetMapping("/bookbyId/{Id}")
 	public ResponseEntity<Book> findbookById(@PathVariable("Id") Integer Id) throws BookNotFoundException{
 		
@@ -48,7 +67,12 @@ public class BookController {
 		
 	}
 	
-	
+	/**
+	 * Updates an existing book.
+	 * @param book the book to update
+	 * @return ResponseEntity containing the updated book and HTTP status code OK
+	 * @throws BookNotFoundException if the book with the given ID is not found
+	 */
 	@PutMapping("/update")
 	public ResponseEntity<Book> updateBook(@RequestBody Book book) throws BookNotFoundException{
 		Book book2=bookService.Updatebook(book);
@@ -57,6 +81,13 @@ public class BookController {
 		
 	}
 	
+	
+	/**
+	 * Deletes a book by its ID.
+	 * @param Id the ID of the book to delete
+	 * @return ResponseEntity containing the deleted book and HTTP status code OK
+	 * @throws BookNotFoundException if the book with the given ID is not found
+	 */
 	@DeleteMapping("/delete/{Id}")
 	public ResponseEntity<Book> DeleteBookById(@PathVariable Integer Id) throws BookNotFoundException{
 		Book book=bookService.DeleteBookById(Id);
