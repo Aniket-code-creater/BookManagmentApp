@@ -15,14 +15,13 @@ URL: /api/books/{id}
 Retrieves a book with the specified ID.
 
 ### Add a new book
-Method: POST
-URL: /api/books
+ ##### Method: POST
+##### URL: /api/books
 Adds a new book to the list. The book details should be provided in the request body as JSON.
 
 Example request body:
 
 json
-Copy code
 {
   "title": "The Great Gatsby",
   "author": "F. Scott Fitzgerald",
@@ -37,8 +36,6 @@ Updates an existing book with the specified ID. The updated book details should 
 
 Example request body:
 
-json
-Copy code
 {
   "title": "New Title",
   "author": "New Author",
@@ -55,23 +52,21 @@ Deletes a book with the specified ID.
 Response Format
 The API endpoints return JSON responses in the following format:
 
-json
-Copy code
 {
   "status": "success",
   "data": { ... }
 }
+🧷
 In case of an error, the response format will be:
 
-json
-Copy code
+
 {
   "status": "error",
   "message": "Error message"
 }
 
 
-Contact
+#### Contact
 If you have any questions or suggestions, please contact your- aniketmakwana1010@gmail.com.
 
 
