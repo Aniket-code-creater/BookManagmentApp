@@ -23,9 +23,10 @@ Adds a new book to the list. The book details should be provided in the request 
 
 json
 {
-  "title": "The Great Gatsby",
-  "author": "F. Scott Fitzgerald",
-  "isbn": "9781234567890"
+  "author": "string",
+  "bookName": "string",
+  "price": 0,
+  "bookId": 0
 }
 
 
@@ -37,9 +38,10 @@ Updates an existing book with the specified ID. The updated book details should 
 ###### Example request body:
 
 {
-  "title": "New Title",
-  "author": "New Author",
-  "isbn": "9780987654321"
+  "author": "string",
+  "bookName": "string",
+  "price": 0,
+  "bookId": 0
 }
 
 
@@ -53,8 +55,10 @@ Deletes a book with the specified ID.
 ##### The API endpoints return JSON responses in the following format:
 
 {
-  "status": "success",
-  "data": { ... }
+  "author": "string",
+  "bookName": "string",
+  "price": 0,
+  "bookId": 0
 }
 
 ###### In case of an error, the response format will be:
