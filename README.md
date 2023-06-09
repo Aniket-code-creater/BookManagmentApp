@@ -10,8 +10,8 @@ URL: /api/books
 Returns a list of all books.
 
 ### Retrieve a book by its ID
-Method: GET
-URL: /api/books/{id}
+##### Method: GET
+##### URL: /api/books/{id}
 Retrieves a book with the specified ID.
 
 ### Add a new book
@@ -19,7 +19,7 @@ Retrieves a book with the specified ID.
 ##### URL: /api/books
 Adds a new book to the list. The book details should be provided in the request body as JSON.
 
-Example request body:
+##### Example request body:
 
 json
 {
@@ -30,11 +30,11 @@ json
 
 
 ### Update an existing book
-Method: PUT
+##### Method: PUT
 URL: /api/books/{id}
 Updates an existing book with the specified ID. The updated book details should be provided in the request body as JSON.
 
-Example request body:
+###### Example request body:
 
 {
   "title": "New Title",
@@ -45,8 +45,8 @@ Example request body:
 
 
 ### Delete a book by its ID
-Method: DELETE
-URL: /api/books/{id}
+##### Method: DELETE
+##### URL: /api/books/{id}
 Deletes a book with the specified ID.
 
 Response Format
@@ -56,8 +56,8 @@ The API endpoints return JSON responses in the following format:
   "status": "success",
   "data": { ... }
 }
-🧷
-In case of an error, the response format will be:
+
+###### In case of an error, the response format will be:
 
 
 {
