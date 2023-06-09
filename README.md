@@ -3,7 +3,7 @@ This is a Spring Boot application that provides a RESTful API for managing a lis
 ## Technology used :
 ### Java, Springboot, Maven, SQL, Swagger UI
 
-https://i.ibb.co/SfMLFqM/swagger-image.png
+<img src="https://i.ibb.co/SfMLFqM/swagger-image.png" alt="">
 
 ## API Endpoints
 ### Retrieve all books
