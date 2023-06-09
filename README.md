@@ -6,17 +6,17 @@ This is a Spring Boot application that provides a RESTful API for managing a lis
 ## API Endpoints
 ### Retrieve all books
 ##### Method: GET
-##### URL: /api/books
+##### URL: /ijona/books
 Returns a list of all books.
 
 ### Retrieve a book by its ID
 ##### Method: GET
-##### URL: /api/books/{id}
+##### URL: /ijona/bookbyId/{Id}
 Retrieves a book with the specified ID.
 
 ### Add a new book
  ##### Method: POST
-##### URL: /api/books
+##### URL: /ijona/addbook
 Adds a new book to the list. The book details should be provided in the request body as JSON.
 
 ##### Example request body:
@@ -31,7 +31,7 @@ json
 
 ### Update an existing book
 ##### Method: PUT
-##### URL: /api/books/{id}
+##### URL: /ijona/update
 Updates an existing book with the specified ID. The updated book details should be provided in the request body as JSON.
 
 ###### Example request body:
@@ -46,7 +46,7 @@ Updates an existing book with the specified ID. The updated book details should 
 
 ### Delete a book by its ID
 ##### Method: DELETE
-##### URL: /api/books/{id}
+##### URL: /ijona/delete/{Id}
 Deletes a book with the specified ID.
 
 ##### Response Format
